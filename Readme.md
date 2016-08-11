@@ -1,6 +1,6 @@
-# Microsoft Graph Excel REST API ASP.NET Excel as a Calculation Service sample
+# Microsoft Graph Excel REST API ASP.NET Excel as a Calculation Service 
 
-This sample shows how to call an Excel function within an Excel document stored in your OneDrive for Business account by using the Excel REST APIs.
+This sample shows how to call a custom Excel function within an Excel document stored in your OneDrive for Business acccount using the Excel REST APIs.
 
 ## Prerequisites
 
@@ -24,15 +24,15 @@ To use the Microsoft Graph Excel REST API ASP.NET Excel as a Calculation Service
      > Note: During the app registration process, make sure to specify **http://localhost:44347** as the **Sign-on URL** and the **Reply URL**.  
 
 ## Configure the app
-1. Open **ExcelAsACalculationService.sln** file. 
+1. Open **ExcelWorkbookAsACalculationService.sln** file. 
 2. In Solution Explorer, open the **Web.config** file. 
 3. Replace *ENTER_YOUR_CLIENT_ID* with the client ID of your registered Azure application.
 4. Replace *ENTER_YOUR_SECRET* with the key of your registered Azure application.
 
 ## Run the app
 1. Press F5 to build and debug. Run the solution and sign in with your organizational account. The application launches on your local host and shows the starter page. 
-     > Note: Copy and paste the start page URL address **http://localhost:44347/home/index** to a different browser if you get the following error during sign in: **AADSTS70001: Application with identifier ad533dcf-ccad-469a-abed-acd1c8cc0d7d was not found in the directory**.
+     > Note: Copy and paste the start page URL address **http://localhost:44391/home/index** to a different browser if you get the following error during sign in: **AADSTS70001: Application with identifier ad533dcf-ccad-469a-abed-acd1c8cc0d7d was not found in the directory**.
 2. Select the `Excel` link from the top menu bar.
-4. The application relies on you having an Excel workbook called 'Book.xlsx' in the root OneDrive folder of your O365 account. If this file does not exist, please manually add to your OneDrive by navigating to **https://yourtenant.sharepoint.com**, clicking on the App Launcher "Waffle" at the top left of the page, and then choosing the OneDrive application - add a new Excel file called Book.xlsx.
-5. Enter the 3 values rate, nper, and pv and press the calculate button - the payment per month should be calculated. 
+4. The application relies on you having an Excel workbook called 'RestaurantBillCalculator.xlsx' in the root OneDrive folder of your O365 account. If this file does not exist, it will be automatically added to your OneDrive
+5. On calculate page enter the appropriate values and press the calculate button - the total bill (including tip) and amount per person should be calculated. 
 
