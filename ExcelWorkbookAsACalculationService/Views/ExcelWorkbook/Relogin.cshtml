@@ -1,0 +1,14 @@
+﻿@*//Copyright (c) CodeMoggy. All rights reserved. Licensed under the MIT license.
+    //See LICENSE in the project root for license information.*@
+
+@using Microsoft.Graph
+
+@{
+    ViewBag.Title = "Excel Workbook as a Calculation Service";
+}
+<h2>@ViewBag.Title.</h2>
+
+<p>
+    The token for accessing the Graph API is no longer valid.
+    Click @Html.ActionLink("here", "RefreshSession", "ExcelWorkbook", null, null) to sign-in and get a new access token.
+</p>

@@ -1,6 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿//Copyright (c) CodeMoggy. All rights reserved. Licensed under the MIT license.
+//See LICENSE in the project root for license information.
+
 using System.Web;
 using System.Web.Mvc;
 using Microsoft.Owin.Security.Cookies;

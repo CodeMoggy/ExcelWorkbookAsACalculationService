@@ -1,6 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿//Copyright (c) CodeMoggy. All rights reserved. Licensed under the MIT license.
+//See LICENSE in the project root for license information.
+
+using Microsoft.Owin.Security;
+using Microsoft.Owin.Security.OpenIdConnect;
 using System.Web;
 using System.Web.Mvc;
 
@@ -11,6 +13,12 @@ namespace ExcelWorkbookAsACalculationService.Controllers
     {
         public ActionResult Index()
         {
+            if (!Request.IsAuthenticated)
+            {
+                HttpContext.GetOwinContext().Authentication.Challenge(new AuthenticationProperties { RedirectUri = "/" },
+                    OpenIdConnectAuthenticationDefaults.AuthenticationType);
+            }
+
             return View();
         }
 
